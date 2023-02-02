@@ -6,7 +6,17 @@ $job = new Job;
 
 $template = new Template('templates/frontpage.php');
 
-$template->title = 'latest jpbs';
+$category = isset($_GET['category']) ? $_GET['category'] : null;
 
-$template->jobs = $job->getAllJobs();
+if ($category) {
+    $template->title = 'Jobs in ' . $job->getCategory($category)->name;
+    $template->jobs = $job->getSingleCategory($category);
+} else {
+
+    $template->title = 'Latest Jobs';
+
+    $template->jobs = $job->getAllJobs();
+}
+
+$template->categories = $job->getCategories();
 echo $template;
