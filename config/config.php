@@ -1,7 +1,7 @@
 <?php
 // DB Params
 define("HOST", "localhost");
-define("DBNAME", "project_job_listers");
+define("DBNAME", "project_job_lister");
 define("USER", "root");
 define("PASSWORD", "");
 

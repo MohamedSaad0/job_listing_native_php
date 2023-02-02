@@ -70,7 +70,8 @@ class DB
     }
 
     // Fetching single record
-    public function single() {
+    public function single()
+    {
         $this->execute();
         return $this->stmt->fetch(PDO::FETCH_OBJ);
     }
