@@ -1,4 +1,4 @@
-<?php include_once 'inc/header.php'; ?>
+<?php include 'inc/header.php'; ?>
 
 <div class="container mt-5 border bg-secondary">
     <center>
@@ -27,9 +27,9 @@
             <p> <?php echo $job->description ?> </p>
         </div>
         <div class="col-md-2 ps-5 text-end ">
-            <a href="/job/<?php echo $job->id?>" class="btn btn-secondary py-3">View</a>
+            <a href="job.php?id=<?php echo $job->id?>" class="btn btn-secondary py-3">View</a>
         </div>
     </div>
 <?php endforeach ?>
 
-<?php include_once 'inc/footer.php'; ?>
+<?php include 'inc/footer.php'; ?>
